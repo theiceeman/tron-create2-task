@@ -12,7 +12,7 @@ module.exports = {
       network_id: "1",
     },
     shasta: {
-      privateKey: process.env.PRIVATE_KEY_SHASTA,
+      privateKey: process.env.PRIVATE_KEY,
       userFeePercentage: 50,
       feeLimit: 1000 * 1e6,
       fullHost: "https://api.shasta.trongrid.io",
@@ -27,8 +27,7 @@ module.exports = {
     },
     development: {
       // For trontools/quickstart docker image
-      privateKey:
-        "da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0",
+      privateKey:process.env.PRIVATE_KEY,
       userFeePercentage: 0,
       feeLimit: 1000 * 1e6,
       fullHost: "http://127.0.0.1:" + port,
