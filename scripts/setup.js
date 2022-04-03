@@ -1,6 +1,7 @@
 var fs = require('fs')
 var path = require('path')
-var MetaCoin = require('../build/contracts/MetaCoin')
+var MetaCoin = require('../build/contracts/MetaCoin.json')
+// console.log(MetaCoin)
 
 const address = MetaCoin.networks['2'].address
 

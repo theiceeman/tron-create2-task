@@ -1,5 +1,4 @@
 /* 
-
 Running migration: 2_deploy_contracts.js
   Replacing TronCustodialWallet...
   TronCustodialWallet:
@@ -16,8 +15,10 @@ Running migration: 2_deploy_contracts.js
 */
 var TronCustodialWallet = artifacts.require("./TronCustodialWallet.sol");
 var TronCustodialWalletFactory = artifacts.require("./TronCustodialWalletFactory.sol");
+// var Metacoin = artifacts.require("./Metacoin.sol");
 
-module.exports = function(deployer) {
+module.exports = function(deployer, network, accounts) {
   deployer.deploy(TronCustodialWallet);
   deployer.deploy(TronCustodialWalletFactory);
+  // deployer.deploy(Metacoin, 1000000);
 };
