@@ -18,8 +18,13 @@ contract("TronCustodialWallet", function (accounts) {
     tronCustodialWallet = await TronCustodialWallet.deployed();
     tronCustodialWalletFactory = await TronCustodialWalletFactory.deployed();
 
-    // let addressInBase58 = tronWeb.address.fromHex(tronCustodialWallet.address);
-    // console.log("addressInBase58", addressInBase58);
+    let addressInBase58 = tronWeb.address.fromHex(tronCustodialWallet.address);
+    console.log(
+      "addressInBase58",
+      addressInBase58,
+      "address",
+      tronCustodialWallet.address
+    );
   });
   it("should deploy with createClone2", async function () {
     let result = await tronCustodialWalletFactory.cloneDeterministic.call(
